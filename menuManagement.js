@@ -7,6 +7,7 @@ export default class MenuManagement {
         const cakeDish = new Dish("cake", 50, 8);
         this.dishes.push(pizzaDish);
         this.dishes.push(cakeDish);
+        this.displayMenu = this.displayMenu.bind(this);
     }
 
     addDish(name, price, preparationTime) {
@@ -21,6 +22,7 @@ export default class MenuManagement {
             console.log("-------------------------")
         }
     }
+
 
     getDishesByNameArray(dishNamesArray) {
         let orderedDishes = [];
